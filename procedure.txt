@@ -1,0 +1,290 @@
+LLD Prep strategy and questions
+Note :- This contains prep plan and questions use chatGPT to model it according to your role and org you are preparing for. Also get it to write solutions following this plan.
+
+How To Think About LLD
+
+Think of LLD as:
+
+"How would I model and organize this backend system cleanly?"
+
+NOT:
+
+Perfect UML
+
+Every design pattern
+
+Enterprise architecture diagrams
+
+Your goal:
+
+Clean entities
+
+Clear relationships
+
+Extensibility
+
+Workflows
+
+Concurrency awareness
+
+LLD Interview Framework
+
+Use this exact flow for every question.
+
+1. Clarify Requirements
+
+Ask:
+
+Core features?
+
+Scale/concurrency concerns?
+
+Single machine or distributed?
+
+What's out of scope?
+
+2. Identify Core Entities
+
+Ask:
+
+"What are the nouns in this system?"
+
+Examples:
+
+Uber:
+
+Rider
+
+Driver
+
+Trip
+
+Vehicle
+
+Booking:
+
+User
+
+Show
+
+Seat
+
+Reservation
+
+Scheduler:
+
+Job
+
+Worker
+
+Queue
+
+3. Define Relationships
+
+Examples:
+
+Driver HAS-A Vehicle
+
+Trip HAS-A Rider
+
+Reservation BELONGS TO User
+
+Keep it simple.
+
+4. Add Interfaces / Strategies
+
+Ask:
+
+"What business logic may change later?"
+
+Examples:
+
+PricingStrategy
+
+MatchingStrategy
+
+RetryStrategy
+
+Filter
+
+This is often the strongest SDE-2 signal.
+
+5. Define Main Workflow
+
+Explain:
+
+How requests enter
+
+How processing happens
+
+State transitions
+
+Failure paths
+
+6. Discuss Concurrency
+
+Always mention:
+
+Race conditions
+
+Locks
+
+Atomic updates
+
+Thread safety
+
+Common examples:
+
+Double seat booking
+
+Two drivers accepting same ride
+
+Multiple workers processing same job
+
+7. Discuss Extensibility
+
+Ask:
+
+"What feature might product ask for next?"
+
+Examples:
+
+New pricing algorithm
+
+New retry policy
+
+New notification channel
+
+LLD Topics To Know
+
+Only focus on concepts that repeatedly appear.
+
+OOP Fundamentals
+
+Encapsulation
+
+Abstraction
+
+Inheritance
+
+Polymorphism
+
+Relationships
+
+Association
+
+Aggregation
+
+Composition
+
+High ROI Patterns
+
+Factory
+
+Strategy
+
+Observer
+
+State
+
+Concurrency
+
+Locks
+
+Synchronization
+
+Thread Safety
+
+Common Building Blocks
+
+Scheduling
+
+Search & Filtering
+
+Reservations
+
+Queues
+
+Notifications
+
+LLD Question List
+
+High Priority
+
+Parking Lot
+
+Ride Sharing System (Uber/Lyft)
+
+Job Scheduler
+
+Unix File Search
+
+Movie Ticket / Seat Reservation System
+
+Amazon Locker System
+
+Meeting Room Scheduler
+
+Medium Priority
+
+Food Delivery System
+
+Hotel Reservation System
+
+Inventory Management System
+
+Event Processing Framework
+
+Car Rental System
+
+Notification Framework
+
+Payment Processing System
+
+Splitwise
+
+Low Priority
+
+Elevator System
+
+Library Management System
+
+ATM
+
+Vending Machine
+
+Logger Framework
+
+Download Manager
+
+Online Shopping Cart
+
+Airline Reservation System
+
+Chess
+
+Snake & Ladder
+
+LLD Interview Advice
+
+Start with requirements. A wrong assumption can derail the entire design.
+
+Spend most of your time on entities, relationships, and workflows. That's where most interview value lies.
+
+Don't force design patterns. Use them only when they solve a real extensibility problem.
+
+Always discuss concurrency if shared resources exist (seats, jobs, rides, inventory, lockers, etc.).
+
+Think about what business logic might change in the future and abstract only those parts.
+
+Keep the design simple. Interviewers generally prefer a clean design with sensible tradeoffs over an overengineered one.
+
+Communicate your thought process continuously instead of silently drawing diagrams.
+
+If stuck, fall back to the framework: Requirements → Entities → Relationships → Strategies → Workflow → Concurrency → Extensibility.
+
+Focus on demonstrating structured thinking, not perfect UML or every design pattern you've learned.
+
+Remember: Most candidates fail LLD interviews due to lack of structure, not lack of knowledge. A clear, organized approach often matters more than the final design itself.
+
+

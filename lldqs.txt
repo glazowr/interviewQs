@@ -1,0 +1,36 @@
+a log file reader that could stream real time updates to connected clients using sockets
+
+**Q1. Text Editor / String Manipulation**
+
+Design and implement the following operations:
+
+* `insert(string)`
+* `print(x)`
+* `left(x)`
+* `right(x)`
+* `backspace(x)`
+* `delete(x)`
+
+The question focused on designing a text editor supporting cursor movement and editing operations.
+
+
+
+Design a Thread-Safe Parking Lot System
+
+The parking lot is one-dimensional.
+
+Requirements:
+
+* A car occupies 1 parking spot.
+* A truck occupies 2 consecutive parking spots.
+* Design a thread-safe system that handles concurrent parking and removal operations.
+
+
+
+Design an Asynchronous Task Processor
+
+Design an asynchronous task processing system and extend it to support:
+* Scheduling tasks for a particular time
+* Scheduling tasks at recurring intervals
+* Task processing and execution management
+
